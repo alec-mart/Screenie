@@ -1,6 +1,6 @@
 # Screenie
 
-Windows screenshot + note tool for Claude Code workflows. Global hotkey → region snip → note → paired `snap_*.png` / `snap_*.txt` in a target folder.
+Screenshot + note tool for Claude Code workflows. Global hotkey → region snip → note → paired `snap_*.png` / `snap_*.txt` in a target folder. Windows app + Linux script, same file convention.
 
 ![demo](docs/demo.gif)
 
@@ -30,6 +30,15 @@ pairs first. Delete each pair once handled.
 - Optional run-at-startup via HKCU Run key (checkbox in-app, off by default).
 - Close/minimize → tray. Exit from tray menu.
 - `%APPDATA%\Screenie\config.ini`
+
+## Linux
+
+`screenie.sh` — same pairs, no app. Your DE handles the keybind.
+
+- Needs a region tool (`grim`+`slurp`, `maim`, `flameshot`, `gnome-screenshot`, or `spectacle`) and `zenity` or `kdialog` for the note. Clipboard copy if `wl-copy`/`xclip` present.
+- `./screenie.sh --set-folder ~/proj/.screenie` — set the route folder (config in `~/.config/screenie/config`).
+- Bind `screenie.sh` to PrtSc in your DE's keyboard shortcut settings.
+- Note prompt: OK saves, empty or cancel skips.
 
 ## Build
 
