@@ -256,7 +256,6 @@ namespace ScreenieApp
 
             status = new StatusBar();
             status.SizingGrip = false;
-            status.Text = "Ready — press " + hkDisplay + " to snap.";
 
             Controls.Add(banner);
             Controls.Add(grp);
