@@ -13,10 +13,13 @@ Screenshot + note tool for Windows, built for a Claude Code workflow. Instead of
 Point the route folder at a `.screenie\` folder inside your project (gitignore it), then add this to the project's CLAUDE.md:
 
 ```
-When I say "screenie", read the newest snap_*.png in .screenie/ plus its matching .txt note.
+## Screenie
+.screenie/ is an inbox. Each snap_*.png has a matching snap_*.txt telling you
+what to do with it. When I say "screenie", work through every pair in there
+and delete each pair once it's handled.
 ```
 
-Then just type "screenie" in Claude Code.
+Snap as many things as you want, then say "screenie" — Claude works the queue and cleans it out, so the folder only ever holds what's still pending.
 
 ## Settings
 
