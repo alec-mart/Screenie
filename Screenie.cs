@@ -203,16 +203,9 @@ namespace ScreenieApp
             title.Text = "Screenie";
             title.Font = new Font("Tahoma", 14f, FontStyle.Bold);
             title.AutoSize = true;
-            title.Location = new Point(12, 7);
+            title.Location = new Point(12, 15);
             title.BackColor = Color.White;
-            Label tag = new Label();
-            tag.Text = "Snap it. Note it. Route it.";
-            tag.ForeColor = Color.Gray;
-            tag.AutoSize = true;
-            tag.Location = new Point(14, 34);
-            tag.BackColor = Color.White;
             banner.Controls.Add(title);
-            banner.Controls.Add(tag);
 
             GroupBox grp = new GroupBox();
             grp.Text = "Route screenshots + notes to";
