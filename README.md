@@ -34,3 +34,5 @@ pairs first. Delete each pair once handled.
 ## Build
 
 `build.bat` — compiles `Screenie.cs` with the csc bundled in Windows, no SDK. Or grab `Screenie.exe` from Releases.
+
+The exe is unsigned, so SmartScreen warns on first run (More info → Run anyway). It's one .cs file — read it and build it yourself if you'd rather.
