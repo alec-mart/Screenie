@@ -8,7 +8,7 @@ Windows screenshot + note tool for Claude Code workflows. Global hotkey → regi
 
 ## Usage
 
-- `F5` — drag to capture. Saves immediately, also copied to clipboard.
+- `PrtSc` (default, rebindable) — drag to capture. Saves immediately, also copied to clipboard.
 - Note prompt: `Enter` save, `Ctrl+Enter` newline, `Esc` skip.
 - Output: `snap_YYYYMMDD_HHMMSS.png` + `.txt` in the route folder.
 
@@ -26,8 +26,8 @@ pairs first. Delete each pair once handled.
 ## Config
 
 - Route folder: in-app, or tray icon > Route to.
-- Hotkey: click the box in-app, press a combo. F1–F12 / A–Z / 0–9 / PrintScreen, with Ctrl/Alt/Shift. Global F5 shadows browser refresh.
-- Autostart via HKCU Run key (checkbox in-app).
+- Hotkey: click the box in-app, press a combo. F1–F12 / A–Z / 0–9 / PrintScreen, with Ctrl/Alt/Shift. If Windows has PrtSc bound to Snipping Tool, turn that off (Settings > Accessibility > Keyboard) or rebind.
+- Optional run-at-startup via HKCU Run key (checkbox in-app, off by default).
 - Close/minimize → tray. Exit from tray menu.
 - `%APPDATA%\Screenie\config.ini`
 

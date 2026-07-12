@@ -62,7 +62,7 @@ namespace ScreenieApp
     {
         public string Folder = "";
         public List<string> Recent = new List<string>();
-        public string Hotkey = "F5";
+        public string Hotkey = "PRINTSCREEN";
         public bool FirstRun = false;
 
         static string Dir { get { return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Screenie"); } }
@@ -156,10 +156,6 @@ namespace ScreenieApp
                 try { Directory.CreateDirectory(cfg.Folder); } catch { }
                 cfg.Touch(cfg.Folder);
                 RebuildRouteMenu();
-                loadingUi = true;
-                SetStartup(true);
-                startupChk.Checked = true;
-                loadingUi = false;
             }
 
             IntPtr h = this.Handle; // force handle creation so the hotkey works while hidden
@@ -170,7 +166,7 @@ namespace ScreenieApp
 
         void ParseHotkey(string spec)
         {
-            hkMods = 0; hkVk = 0x74; hkDisplay = "F5";
+            hkMods = 0; hkVk = 0x2C; hkDisplay = "PRINTSCREEN";
             if (string.IsNullOrEmpty(spec)) return;
             string[] parts = spec.ToUpperInvariant().Split('+');
             uint mods = 0; uint vk = 0; string keyName = "";
