@@ -14,12 +14,13 @@ Point the route folder at a `.screenie\` folder inside your project (gitignore i
 
 ```
 ## Screenie
-.screenie/ is an inbox. Each snap_*.png has a matching snap_*.txt telling you
-what to do with it. When I say "screenie", work through every pair in there
-and delete each pair once it's handled.
+.screenie/ is an inbox of annotated screenshots. Each snap_*.png has a matching
+snap_*.txt saying what to do with it. Whenever I bring up frontend/UI changes,
+check .screenie/ and review any pairs in there first — they show exactly what I
+mean. Delete each pair once it's handled.
 ```
 
-Snap as many things as you want, then say "screenie" — Claude works the queue and cleans it out, so the folder only ever holds what's still pending.
+Snap as many things as you want, then just ask for the frontend changes — Claude checks the inbox on its own, works the queue, and cleans it out, so the folder only ever holds what's still pending.
 
 ## Settings
 
