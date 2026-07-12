@@ -1,35 +1,32 @@
 # Screenie
 
-Screenshot + note tool for Windows, built for a Claude Code workflow. Instead of writing a paragraph explaining which button you mean, hit F5, box it, type the note, and tell Claude to go look.
+Windows screenshot + note tool for Claude Code workflows. Global hotkey → region snip → note → paired `snap_*.png` / `snap_*.txt` in a target folder.
 
-## Use
+## Usage
 
-- Press F5, drag a box. The screenshot saves instantly (and lands on your clipboard).
-- A note box pops up. Enter saves, Ctrl+Enter for a new line, Esc skips.
-- Files land in your route folder as matching pairs: `snap_*.png` + `snap_*.txt`.
+- `F5` — drag to capture. Saves immediately, also copied to clipboard.
+- Note prompt: `Enter` save, `Ctrl+Enter` newline, `Esc` skip.
+- Output: `snap_YYYYMMDD_HHMMSS.png` + `.txt` in the route folder.
 
-## Claude Code setup
+## Claude Code
 
-Point the route folder at a `.screenie\` folder inside your project (gitignore it), then add this to the project's CLAUDE.md:
+Route to `.screenie/` in your project (gitignored), add to CLAUDE.md:
 
 ```
 ## Screenie
-.screenie/ is an inbox of annotated screenshots. Each snap_*.png has a matching
-snap_*.txt saying what to do with it. Whenever I bring up frontend/UI changes,
-check .screenie/ and review any pairs in there first — they show exactly what I
-mean. Delete each pair once it's handled.
+.screenie/ is an inbox of annotated screenshots: each snap_*.png has a matching
+snap_*.txt saying what to do with it. On frontend/UI requests, review pending
+pairs first. Delete each pair once handled.
 ```
 
-Snap as many things as you want, then just ask for the frontend changes — Claude checks the inbox on its own, works the queue, and cleans it out, so the folder only ever holds what's still pending.
+## Config
 
-## Settings
-
-- Route folder: Browse button in the app, or right-click the tray icon > Route to for recent folders.
-- Hotkey: click the hotkey box in the app and press the combo you want. Warning: global F5 also steals browser refresh — rebind to Ctrl+F5 or F8 if that gets annoying.
-- Starts with Windows by default (checkbox to turn off).
-- X or minimize hides it to the tray. Exit from the tray menu.
-- Config lives in `%APPDATA%\Screenie\config.ini`.
+- Route folder: in-app, or tray icon > Route to.
+- Hotkey: click the box in-app, press a combo. F1–F12 / A–Z / 0–9 / PrintScreen, with Ctrl/Alt/Shift. Global F5 shadows browser refresh.
+- Autostart via HKCU Run key (checkbox in-app).
+- Close/minimize → tray. Exit from tray menu.
+- `%APPDATA%\Screenie\config.ini`
 
 ## Build
 
-Run `build.bat`. Uses the C# compiler built into Windows, no SDK needed. Or just grab `Screenie.exe` from Releases.
+`build.bat` — compiles `Screenie.cs` with the csc bundled in Windows, no SDK. Or grab `Screenie.exe` from Releases.
