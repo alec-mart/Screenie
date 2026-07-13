@@ -2,7 +2,7 @@
 
 Screenshot + note tool for Claude Code workflows. Global hotkey → region snip → note → paired `snap_*.png` / `snap_*.txt` in a target folder. Windows app + Linux script, same file convention.
 
-![demo](docs/demo.gif)
+<img width="655" height="484" alt="Animation" src="https://github.com/user-attachments/assets/751f916c-e417-4389-a65e-e533da8d0c88" />
 
 ![settings window](docs/screenie.png)
 
